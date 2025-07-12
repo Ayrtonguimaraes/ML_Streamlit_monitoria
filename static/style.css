@@ -1,0 +1,53 @@
+/* Estilos personalizados para o projeto */
+
+/* Melhorias gerais */
+.stApp {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Cards personalizados */
+.custom-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border-left: 4px solid #1f77b4;
+}
+
+/* Botões personalizados */
+.custom-button {
+    background: linear-gradient(45deg, #1f77b4, #ff7f0e);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 2rem !important;
+    }
+    
+    .sub-header {
+        font-size: 1.2rem !important;
+    }
+} 
