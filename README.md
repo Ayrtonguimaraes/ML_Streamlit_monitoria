@@ -46,7 +46,7 @@ app_simples_monitoria/
 
 ### Pré-requisitos
 
-- Python 3.8 ou superior
+- Python 3.11 (recomendado) ou 3.8+
 - pip (gerenciador de pacotes Python)
 
 ### Passo a Passo
@@ -181,6 +181,38 @@ model = RandomForestClassifier(n_estimators=100, random_state=42)
 
 ### Erro: "Port already in use"
 - Use uma porta diferente: `streamlit run app/main.py --server.port 8502`
+
+## 🚀 Deploy no Streamlit Cloud
+
+### Passo a Passo para Deploy
+
+1. **Suba seu projeto para o GitHub**
+   - Crie um repositório no GitHub (público ou privado)
+   - Faça commit de todos os arquivos do projeto
+   - **Importante:** Certifique-se de incluir `runtime.txt` e `packages.txt`
+
+2. **Acesse o Streamlit Cloud**
+   - Vá para https://streamlit.io/cloud
+   - Faça login com sua conta GitHub
+
+3. **Crie um novo app**
+   - Clique em "New app"
+   - Selecione seu repositório
+   - Escolha a branch `main`
+   - No campo "Main file path", coloque: `app/main.py`
+   - Clique em "Deploy"
+
+4. **Aguarde o deploy**
+   - O Streamlit irá instalar as dependências automaticamente
+   - O modelo será treinado na primeira execução
+   - Após alguns minutos, seu app estará disponível!
+
+### Arquivos Importantes para Deploy
+
+- `requirements.txt` - Dependências Python atualizadas
+- `runtime.txt` - Versão do Python (3.11)
+- `packages.txt` - Dependências do sistema (se necessário)
+- `.streamlit/config.toml` - Configurações do Streamlit
 
 ## 📝 Licença
 
